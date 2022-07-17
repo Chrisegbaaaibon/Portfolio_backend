@@ -42,7 +42,7 @@ app.post('/sendmail', async (req, res)=>{
         })
 
         return res.json({
-            status: 'success'
+            message: 'success'
         })
         } catch (error) {
           return error
