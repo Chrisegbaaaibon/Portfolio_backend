@@ -33,7 +33,7 @@ app.post('/sendmail', async (req, res)=>{
         const email = req.body.email;
         const message = req.body.message;
         await sendMail({
-            email: 'christopheregbaaibon@gmail.com',
+            email: 'johnnyopeyemi@gmail.com',
             subject: 'A new connection',
             html:  `<p>You have a new message</p>
               <p>Name: ${name}</p>
