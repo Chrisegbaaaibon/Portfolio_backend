@@ -25,14 +25,15 @@ const sendMail = async (options) => {
       return await transporter.sendMail(message)
   }
   
-  app.use(express.json(urlencoded({ extended: false})))
+  app.use(express.urlencoded({ extended: false }))
+  app.use(express.json())
 app.post('/sendmail', async (req, res)=>{
         try {
           const name = req.body.name;
         const email = req.body.email;
         const message = req.body.message;
         await sendMail({
-            email: 'johnnyopeyemi@gmail.com',
+            email: 'christopheregbaaibon@gmail.com',
             subject: 'A new connection',
             html:  `<p>You have a new message</p>
               <p>Name: ${name}</p>
